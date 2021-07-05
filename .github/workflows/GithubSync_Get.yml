@@ -1,9 +1,9 @@
 name: GET - Sync bot on CSML Studio
 
 on:
-  pull_request:
+  push:
     branches:
-      - main
+      - dev_get
 
 jobs:
   csml-studio-sync:
