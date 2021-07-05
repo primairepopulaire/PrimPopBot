@@ -2,11 +2,14 @@ name: Sync bot on CSML Studio
 
 on:
   pull_request:
+    types: [ closed ]
     branches:
       - main
 
 jobs:
   csml-studio-sync:
+    if: github.event.pull_request.merged == true
+
     runs-on: ubuntu-latest
 
     steps:
@@ -30,4 +33,4 @@ jobs:
         env:
           CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY }}
           CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET }}
-          DEBUG: "false"
+          DEBUG: "true"
