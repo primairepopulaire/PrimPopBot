@@ -1,9 +1,9 @@
-name: CVR - Sync bot on CSML Studio
+name: CLX - Sync bot on CSML Studio
 
 on:
   push:
     branches:
-      - main
+      - dev_cvr
 
 jobs:
   csml-studio-sync:
@@ -19,8 +19,8 @@ jobs:
           update: true
           build: true
         env:
-          CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY_CLARA }}
-          CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET_CLARA }}
+          CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY_CLX }}
+          CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET_CLX }}
           DEBUG: "true"
 
       - name: Create new snapshot
@@ -28,6 +28,6 @@ jobs:
         with:
           create-snapshot: true
         env:
-          CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY_CLARA }}
-          CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET_CLARA }}
+          CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY_CLX }}
+          CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET_CLX }}
           DEBUG: "false"
