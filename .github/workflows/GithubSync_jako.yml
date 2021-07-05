@@ -1,4 +1,4 @@
-name: Sync bot on CSML Studio
+name: JAKO - Sync bot on CSML Studio
 
 on:
   pull_request:
