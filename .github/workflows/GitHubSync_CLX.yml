@@ -3,7 +3,7 @@ name: CLX - Sync bot on CSML Studio
 on:
   push:
     branches:
-      - dev_cvr
+      - dev_clx
 
 jobs:
   csml-studio-sync:
