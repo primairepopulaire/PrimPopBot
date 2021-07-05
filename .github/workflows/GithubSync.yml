@@ -1,0 +1,33 @@
+name: Sync bot on CSML Studio
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  csml-studio-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Sync with studio
+        uses: cvere/csml-studio-sync-action@vcvr
+  
+        with:
+          update: true
+          build: true
+        env:
+          CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY }}
+          CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET }}
+          DEBUG: "true"
+
+      - name: Create new snapshot
+        uses: CSML-by-Clevy/csml-studio-sync-action@v1.0-beta7
+        with:
+          create-snapshot: true
+        env:
+          CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY }}
+          CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET }}
+          DEBUG: "false"
