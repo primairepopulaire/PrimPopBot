@@ -28,6 +28,6 @@ jobs:
         with:
           create-snapshot: true
         env:
-          CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY }}
-          CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET }}
+          CSML_CLIENT_API_KEY: ${{ secrets.CSML_CLIENT_API_KEY_jako }}
+          CSML_CLIENT_API_SECRET: ${{ secrets.CSML_CLIENT_API_SECRET_jako }}
           DEBUG: "false"
