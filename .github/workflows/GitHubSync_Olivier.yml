@@ -1,4 +1,4 @@
-name: Sync bot on CSML Studio
+name: OLI - Sync bot on CSML Studio
 
 on:
   push:
