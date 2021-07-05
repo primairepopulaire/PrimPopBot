@@ -1,0 +1,56 @@
+{
+  "id": "08b05532-7de0-447d-916a-0e11e9475b3b",
+  "name": "PrimPopBot",
+  "description": "Un assistant conversationnel pour la primaire",
+  "default_flow": "Default",
+  "flows": [
+    {
+      "name": "Default",
+      "description": "Accueil général d'aide et d'assistance",
+      "commands": [
+        "/default"
+      ]
+    },
+    {
+      "name": "QG_plan",
+      "description": "Simple barebones flow. Code your own chatbot from this template!",
+      "commands": [
+        "/qg_plan"
+      ]
+    },
+    {
+      "name": "QG_presentation",
+      "description": "Simple barebones flow. Code your own chatbot from this template!",
+      "commands": [
+        "/qg_presentation"
+      ]
+    },
+    {
+      "name": "QG_tutoriel",
+      "description": "Simple barebones flow. Code your own chatbot from this template!",
+      "commands": [
+        "/qg_tutoriel"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "name": "chatbot-head-primaire-pop.png",
+      "description": null
+    },
+    {
+      "name": "Customize your woka.mp4",
+      "description": null
+    },
+    {
+      "name": "emoji_example.gif",
+      "description": null
+    },
+    {
+      "name": "volume_sonore.png",
+      "description": null
+    }
+  ],
+  "functions": [],
+  "apps": []
+}

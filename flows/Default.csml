@@ -1,0 +1,66 @@
+/**
+ * Welcome to CSML Studio!
+ *
+ * This simple CSML starter flow works out of the box, and you can easily
+ * try it on the right hand side by clicking on `build and run`.
+ *
+ * Some useful CSML links:
+ * 👉 Getting started: https://docs.csml.dev/studio/getting-started
+ * 👉 Give CSML a 🌟 on Github: https://github.com/CSML-by-Clevy/csml-engine
+ * 👉 Join the CSML community on Slack: https://csml.dev/slack
+ */
+start:
+
+ // Add some typing delay to make your conversation more realistic!
+  say Typing(2000)
+  say Carousel(
+    cards = [
+      Card(
+        title="QG de la primaire populaire",
+        subtitle="PrimPopBot, assistance et aide.",
+        image_url="https://primairepopulaire.fr/wp-content/uploads/2021/06/logo-new-primairepopulaire.png",
+      )
+    ]
+  )
+  say Typing(2000)
+  say "Bonjour et bienvenue,"
+  say Typing(2000)
+  say "Ici c'est le QG virtuel pour la primaire populaire ! 👋, je suis **PrimPopBot**, pour vous servir."
+  say Typing(1000)  
+  say "❕ Je suis encore tout jeune 😉, je compte sur vous pour me faire des retours et des demandes sur vos remarques, besoins…"
+  say "Pour cela, il vous suffit d'aller échanger ici au QG avec **Jako**, **Clara** ou **Get**"
+  say Typing(2000)
+
+
+goto menu
+
+menu:
+  do QGVIRTUEL = Button("🏡Présentation du QG virtuel")
+  do PLAN = Button("🗺️Plan du QG")
+  do FEATURES = Button("🎚️Présentation des fonctionnalités")
+
+  say Question(
+    "Sur quels sujets souhaitez-vous avoir plus d'informations ?",
+     button_type="quick_reply",
+     buttons = [QGVIRTUEL, PLAN, FEATURES]
+  )
+  hold
+
+	if (event match QGVIRTUEL) {
+		goto flow QG_presentation
+		goto end
+	}
+
+	if (event match PLAN) {
+		goto flow QG_plan
+		goto end
+	}
+
+  if (event match FEATURES) {
+		goto flow QG_tutoriel
+	}
+
+
+end:
+  // Finish the conversation
+  goto end

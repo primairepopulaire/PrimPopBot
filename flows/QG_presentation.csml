@@ -1,0 +1,5 @@
+start:
+		say Typing(1000)
+		say "La plateforme sert à bla bla bla"
+    say Typing(1000)
+    say "à suivre"

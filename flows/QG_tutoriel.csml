@@ -1,0 +1,137 @@
+start:
+
+  goto choixtuto
+  
+  choixtuto:
+  do DEBUTANTS = Button("💪Trucs et astuces débutants.tes")
+  do CONTACT = Button("🙌Entrer en contact avec des personnes")
+  do VISIOCONF = Button("🎦Participer à une visioconférence (Jitsi)")
+  do DECOR = Button("❔Interagir avec le décor")
+  do EMOJI = Button("😀Utiliser des emojis")
+  do CUSTOM = Button("🤖Système de personalisation")
+  do SON = Button("🔊Réglages ambiance sonore")
+  do INFOS = Button("🖼️Voir les informations d'une personne (à venir)")
+  do AIDE = Button("🤯Des bugs ? Besoin d'une aide technique ?")
+  do MENU = Button("⤴️Retour au menu d'accueil")
+
+  say Typing(2000)
+  say "Voici la liste des fonctionnalités, quelle est celle que vous souhaitez approfondir ?"
+  say Question(
+     button_type="quick_reply",
+     buttons = [DEBUTANTS, CONTACT, VISIOCONF, DECOR, EMOJI, CUSTOM, SON, INFOS, AIDE, MENU]
+  )
+  hold
+
+	if (event match DEBUTANTS) {
+		say Typing(2000)
+		say "Tout d'abord, bravo ! Si vous êtes arrivé.ées jusqu'à moi, c'est déjà une belle étape."
+    say Image("https://media.giphy.com/media/1mgpdUbUyT7z0olfmq/giphy.gif")
+    say Typing(4000)
+    say "Pour information, les déplacements se font avec les flèches, néanmoins vous pouvez aussi utiliser les touches **Z Q S D**  de votre clavier."
+    say Typing(6000)
+    say "Envie d'accélérer ? Appuyer sur **shift** en même temps que la touche de déplacement."
+    say Typing(2000)
+		say Video("https://mapwa.net/static/perso/2022/map/qg/videos/WA-tuto-walk-speed-shift.mp4")
+    say Typing(6000)
+    say "Enfin, en bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
+    say Typing(3000)
+    say Video("https://mapwa.net/static/perso/2022/map/qg/videos/WA-tuto-icon-microphone-camera.mp4")
+		goto fintuto
+	}
+
+	if (event match CONTACT) {
+
+		say Typing(1000)
+    say Image("https://mapwa.net/static/perso/2022/map/qg/images/WA-bulle-rencontre.png")
+		say "Quand vous vous rapprochez d'une personne, une bulle apparaît, et tu peux instantannément discuter avec cette personne."
+    say Typing(1000)
+    say "De même si une personne s'approche de vous, un son vous préviendra."
+    say Typing(1000)
+    say "Ce mode de conversation est limité à 4 personnes, à 4 la bulle devient rouge."
+    say Typing(1000)
+		say Video("https://mapwa.net/static/perso/2022/map/qg/videos/WA-conversation-bubble.mp4")
+    say Typing(1000)
+		goto fintuto
+	}
+
+	if (event match VISIOCONF) {
+		say Typing(1000)
+		say "Oui, voici la carte décrivant les différents endroits :"
+    say Typing(1000)
+    say Image("https://mapwa.net/static/perso/2022/map/qg/qg-PP.png")
+    say "à suivre"
+		goto fintuto
+	}
+
+  if (event match DECOR) {
+		say Typing(1000)
+		say "Quand vous vous déplacez sur des traces de pas, vous verrez une fenêtre apparaître."
+		goto fintuto
+	}
+
+  if (event match EMOJI) {
+		say Typing(1000)
+		say "Pour utiliser des emojis, cliquez sur votre personnage, vous verrez apparaître un cercle d'emojis."
+    say Typing(1000)
+    say Image("https://cdn.csml.dev/customers/08b05532-7de0-447d-916a-0e11e9475b3b/files/e5b3ee31-8c89-42c6-ae6f-f07819d12920/emoji_example.gif")
+    say Typing(1000)
+    say "Sélectionnez directement celui que vous souhaitez !"
+		goto fintuto
+	}
+
+  if (event match CUSTOM) {
+    say Typing(1000)
+		say "Pour personnaliser votre personnage, vous pouvez regarder cette vidéo :"
+    say Typing(1000)
+    say Video("https://cdn.csml.dev/customers/08b05532-7de0-447d-916a-0e11e9475b3b/files/d36035e1-1f46-40cb-a082-834f21b1906b/customize-your-woka.mp4")
+		goto fintuto    
+  }
+
+  if (event match SON) {
+    say Typing(1000)
+		say "Dans certaines zones du QG (espace libre et rivière), Workadventure ajoute une ambiance sonore."
+    say Typing(500)
+    say "Dans ce cas, vous pouvez régler le volume en utilisant le curseur qui apparaît en haut au milieu de votre écran."
+    say Typing(500)
+    say Image("https://cdn.csml.dev/customers/08b05532-7de0-447d-916a-0e11e9475b3b/files/786aaaf0-7fad-4069-a1e4-ceeb77de2031/volume_sonore.png")
+		goto fintuto        
+  }
+
+  if (event match INFOS) {
+    say Typing(1000)
+		say "🚧 En construction ! Cette fonctionnalité en cours de développement permettra de voir des infos sur votre interlocuteur..."
+    say "Par exemple : prénom et nom, ..."
+		goto fintuto
+  }
+
+  if (event match AIDE) {
+    say Typing(1000)
+		say "Si vous rencontrez des bugs ou avez besoin d'assistance technique, adressez-vous à **Jako**, **Clara** ou **Get** ici au QG."
+		goto fintuto
+  }
+
+  // all other cases, including back to home menu
+  else {
+		say Typing(1000)
+		goto flow Default
+  }
+
+fintuto:
+  say "Que voulez-vous faire ?"
+  do BACK1 = Button("⬆️Revenir à la liste des fonctionnalités")
+	do BACK2 = Button("⬆️Retour au menu d'accueil")
+    say Question(
+     button_type="quick_reply",
+     buttons = [BACK1, BACK2]
+  )
+  hold
+
+	 if (event match BACK1) {
+		say Typing(1000)
+		goto flow QG_tutoriel
+	}
+
+	 if (event match BACK2) {
+		say Typing(1000)
+		goto flow Default
+	}

@@ -1,0 +1,32 @@
+start:
+
+		say Typing(1000)
+		say "Le QG est organisé en différentes zones."
+    say Typing(1000)
+    say "Il existe des zones pour travailler à plusieurs, d'autres qui permettent d'accéder à une visioconférence, d'autres plus calmes quand vous passez un coup de fil par exemple."
+    say Typing(4000)
+    say "Autrement, en vous plaçant sur les traces de pas, vous accéderez à des liens utiles concernant la Primaire Populaire"
+    say Typing(4000)
+    say Image("https://mapwa.net/static/perso/2022/map/qg/qg-PP.png")
+    say "Cliquez sur une des icônes en bas à droite du plan pour la voir en plus grand ou télécharger l'image."
+    say Typing(2000)
+    say "N'hésitez pas à explorer toute la carte !"
+    say Typing(6000)
+
+
+goto retour
+
+retour:
+  do RETOUR1 = Button("🤖Retour au menu principal")
+
+  say Question(
+    "Que souhaitez-vous faire maintenant ?",
+     button_type="quick_reply",
+     buttons = [RETOUR1]
+  )
+  hold
+
+	if (event match RETOUR1) {
+		goto flow Default
+		goto end
+	}
