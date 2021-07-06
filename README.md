@@ -1,6 +1,7 @@
 # PrimPopBot
 
 Un chatbot pour https://primairepopulaire.fr/ 
+
 Voir le bot : https://chat.csml.dev/channels/difm7vtdxz0rr16wigcqnk8sbmqkioxi
 
 ## Synchronisation GitHub -> CSML
@@ -27,3 +28,7 @@ Voir le bot : https://chat.csml.dev/channels/difm7vtdxz0rr16wigcqnk8sbmqkioxi
   
   * Le code push sur une branche *dev* se synchronise directement avec le bot. 
   * **Attention** Un merge de pull request d'une branche *dev* sur la *main* synchronise le bot actuellement utilisé dans le QG ! 
+
+## Règles
+
+	* Une pull request doit toujours être validée par au moins une autre personne.
