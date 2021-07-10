@@ -106,7 +106,7 @@ start:
 
   if (event match AIDE) {
     say Typing(1000)
-		say "Si vous rencontrez des bugs ou avez besoin d'assistance technique, adressez-vous à **Jako**, **Clara** ou **Get** ici au QG."
+		say "Si vous rencontrez des bugs ou avez besoin d'assistance technique, adressez-vous à **Jako**, **Clara**, **Get** ou **OlivierG** ici au QG."
 		goto fintuto
   }
 
