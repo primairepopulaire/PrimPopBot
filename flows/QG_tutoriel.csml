@@ -43,7 +43,7 @@ start:
 
 		say Typing(1000)
     say Image("https://mapwa.net/static/perso/2022/map/qg/images/WA-bulle-rencontre.png")
-		say "Quand vous vous rapprochez d'une personne, une bulle apparaît, et tu peux instantannément discuter avec cette personne."
+		say "Quand vous vous rapprochez d'une personne, une bulle apparaît, et vous pouvez instantanément discuter avec cette personne."
     say Typing(1000)
     say "De même si une personne s'approche de vous, un son vous préviendra."
     say Typing(1000)
