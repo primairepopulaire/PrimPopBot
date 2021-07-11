@@ -6,11 +6,11 @@ start:
     say Typing(500)
     say "... et d'interagir facilement avec elles !"
     say Typing(1000)
-    say "En quelques mouvements, vous pouvez commencer des visios avec les personnes autour de vous,"
+    say "En quelques mouvements, vous pouvez commencer des visios avec les personnes qui vous entourent,"
     say Typing(500)
     say "et accéder à diverses ressources. Par exemple, on peut voir les prochaines séances de pote à pote,"
     say Typing(500)
-    say "ou s'incrire au channel Telegram de la Primaire Pop."
+    say "ou s'incrire au groupe Telegram de la Primaire Pop."
     say Typing(1000)
     say "Pour plus d'info, on peut voir la présentation des fonctionnalités."
     goto fintuto@QG_tutoriel
