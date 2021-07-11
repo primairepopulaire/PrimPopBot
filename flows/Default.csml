@@ -28,7 +28,7 @@ start:
   say "Ici c'est le QG virtuel pour la primaire populaire ! 👋, je suis **PrimPopBot**, pour vous servir."
   say Typing(1000)  
   say "❕ Je suis encore tout jeune 😉, je compte sur vous pour me faire des retours et des demandes sur vos remarques, besoins…"
-  say "Pour cela, il vous suffit d'aller échanger ici au QG avec **Jako**, **Clara** ou **Get**"
+  say "Pour cela, il vous suffit d'aller échanger ici au QG avec **Jako**, **Clara**, **Get** ou **OlivierG**."
   say Typing(2000)
 
 
