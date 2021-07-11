@@ -1,6 +1,6 @@
 start:
 		say Typing(1000)
-		say "Cette plateforme permet de rassembler les bénévoles de la Primaire Populaire."
+		say "Cette plateforme permet de rassembler les bénévoles et les salariés de la Primaire Populaire."
     say Typing(1000)
     say "Elle permet de voir les autres personnes mobilisées autour de soi..."
     say Typing(500)
