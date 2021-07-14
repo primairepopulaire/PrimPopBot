@@ -31,23 +31,35 @@ start:
     say Typing(6000)
     say "Envie d'accélérer ? Appuyer sur **shift** en même temps que la touche de déplacement."
     say Typing(2000)
-		say Video("https://mapwa.net/static/perso/watuto//WATUTO-shift-speed.mp4")
+		say Video("https://mapwa.net/static/perso/watuto/WATUTO-shift-speed.mp4")
     say Typing(6000)
-    say "Enfin, en bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
+    
+// TODO CONTINUER pour Clara :)
+
+    say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
     say Typing(3000)
     say Video("https://mapwa.net/static/perso/watuto/WATUTO-icon-microphone-camera.mp4")
+    
+// TODO CONTINUER pour Clara :)
+
+    say Typing(2000)
+    say "Pour avoir une vue plus large de la carte, vous pouvez aussi zoomer le texte de la page de votre navigateur."
+    say Typing(2000)
+    say "Avec les touches **CTRL + Molette de souris** par exemple ou via les menus de votre navigateur."
+    say Typing(3000)
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
 		goto fintuto
 	}
 
 	if (event match CONTACT) {
 
 		say Typing(1000)
-    say Image("https://mapwa.net/static/perso/2022/map/qg/images/WA-bulle-rencontre.png")
-		say "Quand vous vous rapprochez d'une personne, une bulle apparaît, et tu peux instantannément discuter avec cette personne."
+    say Image("https://mapwa.net/static/perso/watuto/WA-bulle-rencontre.png")
+		say "Quand vous vous rapprochez d'une personne, une bulle apparaît, et vous pouvez instantannément discuter avec cette personne."
     say Typing(1000)
     say "De même si une personne s'approche de vous, un son vous préviendra."
     say Typing(1000)
-    say "Ce mode de conversation est limité à 4 personnes, à 4 la bulle devient rouge."
+    say "Ce mode de conversation est limité à 4 personnes. À 4, la bulle devient rouge."
     say Typing(1000)
 		say Video("https://mapwa.net/static/perso/watuto/WATUTO-conversation-bubble.mp4")
     say Typing(1000)
