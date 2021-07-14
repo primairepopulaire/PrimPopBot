@@ -109,7 +109,7 @@ start:
     say Typing(1000)
 		say "Il est possible de personnaliser votre personnage, changer de nom, d'apparence… :"
     say Typing(1000)
-    say Video("https://mapwa.net/static/perso/watuto/WATUTO-customize-your-woka.mp4")
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-customize-your-woka-resized.mp4")
 		goto fintuto    
   }
 
