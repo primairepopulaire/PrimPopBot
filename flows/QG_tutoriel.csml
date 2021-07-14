@@ -25,59 +25,71 @@ start:
 	if (event match DEBUTANTS) {
 		say Typing(2000)
 		say "Tout d'abord, bravo ! Si vous êtes arrivé.ées jusqu'à moi, c'est déjà une belle étape."
-    say Image("https://media.giphy.com/media/1mgpdUbUyT7z0olfmq/giphy.gif")
-    say Typing(4000)
-    say "Pour information, les déplacements se font avec les flèches, néanmoins vous pouvez aussi utiliser les touches **Z Q S D**  de votre clavier."
-    say Typing(6000)
-    say "Envie d'accélérer ? Appuyer sur **shift** en même temps que la touche de déplacement."
-    say Typing(2000)
+    		say Image("https://media.giphy.com/media/1mgpdUbUyT7z0olfmq/giphy.gif")
+   		say Typing(4000)
+    		say "Pour information, les déplacements se font avec les flèches, néanmoins vous pouvez aussi utiliser les touches **Z Q S D**  de votre clavier."
+    		say Typing(6000)
+    		say "Envie d'accélérer ? Appuyer sur **shift** en même temps que la touche de déplacement."
+    		say Typing(2000)
 		say Video("https://mapwa.net/static/perso/watuto/WATUTO-shift-speed.mp4")
-    say Typing(6000)
+    		say Typing(6000)
     
 // TODO CONTINUER pour Clara :)
 
-    say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
-    say Typing(3000)
-    say Video("https://mapwa.net/static/perso/watuto/WATUTO-icon-microphone-camera.mp4")
+    		say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
+    		say Typing(3000)
+    		say Video("https://mapwa.net/static/perso/watuto/WATUTO-icon-microphone-camera.mp4")
     
 // TODO CONTINUER pour Clara :)
 
-    say Typing(2000)
-    say "Pour avoir une vue plus large de la carte, vous pouvez aussi zoomer le texte de la page de votre navigateur."
-    say Typing(2000)
-    say "Avec les touches **CTRL + Molette de souris** par exemple ou via les menus de votre navigateur."
-    say Typing(3000)
-    say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
+    		say Typing(2000)
+    		say "Pour avoir une vue plus large de la carte, vous pouvez aussi zoomer le texte de la page de votre navigateur."
+    		say Typing(2000)
+    		say "Avec les touches **CTRL + Molette de souris** par exemple ou via les menus de votre navigateur."
+    		say Typing(3000)
+    		say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
 		goto fintuto
 	}
 
 	if (event match CONTACT) {
 
 		say Typing(1000)
-    say Image("https://mapwa.net/static/perso/watuto/WA-bulle-rencontre.png")
+    		say Image("https://mapwa.net/static/perso/watuto/WA-bulle-rencontre.png")
 		say "Quand vous vous rapprochez d'une personne, une bulle apparaît, et vous pouvez instantannément discuter avec cette personne."
-    say Typing(1000)
-    say "De même si une personne s'approche de vous, un son vous préviendra."
-    say Typing(1000)
-    say "Ce mode de conversation est limité à 4 personnes. À 4, la bulle devient rouge."
-    say Typing(1000)
-		say Video("https://mapwa.net/static/perso/watuto/WATUTO-conversation-bubble.mp4")
-    say Typing(1000)
+    		say Typing(1000)
+    		say "De même si une personne s'approche de vous, un son vous préviendra."
+    		say Typing(1000)
+    		say "Ce mode de conversation est limité à 4 personnes. À 4, la bulle devient rouge."
+   		say Typing(1000)
+    		say Video("https://mapwa.net/static/perso/watuto/WATUTO-conversation-bubble.mp4")
+    		say Typing(1000)
+    		say "Une précision, certaines zones de la carte peuvent être silencieuse, dans ces zones, il n'est pas possible de converser avec quelqu'un d'autre."
 		goto fintuto
 	}
 
 	if (event match VISIOCONF) {
 		say Typing(1000)
 		say "Oui, voici la carte décrivant les différents endroits :"
-    say Typing(1000)
-    say Image("https://mapwa.net/static/perso/2022/map/qg/qg-PP.png")
-    say "à suivre"
+    		say Typing(1000)
+    		say Image("https://mapwa.net/static/perso/2022/map/qg/qg-PP.png")
+    		say "à suivre"
 		goto fintuto
 	}
 
   if (event match DECOR) {
 		say Typing(1000)
-		say "Quand vous vous déplacez sur des traces de pas, vous verrez une fenêtre apparaître."
+		say "Certains endroits de la carte peuvent avoir des actions, elles sont souvent rendues visibles par un signe (une pancarte, des traces de pas au so…)."
+		say Typing(3000)
+		say "Ainsi ces zones peuvent ouvrir une page web, une vidéo ou un popup par exemple"
+		say Typing(3000)
+		say Video("https://mapwa.net/static/perso/watuto/WATUTO-zone-actions.mp4")
+		
+		// TODO CONTINUER
+
+		say Typing(3000)
+		say "La fenêtre qui s'ouvre peut être aggrandi en plein écran, déplacée ou fermée à l'aide des icônes en haut à gauche."
+		say Typing(3000)
+		say Video("https://mapwa.net/static/perso/watuto/WATUTO-window-icons.mp4")
 		goto fintuto
 	}
 
