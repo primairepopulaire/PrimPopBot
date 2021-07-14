@@ -97,7 +97,7 @@ start:
 		say Typing(1000)
 		say "Pour utiliser des emojis, cliquez sur votre personnage, vous verrez apparaître un cercle d'emojis."
     say Typing(1000)
-    say Image("https://cdn.csml.dev/customers/08b05532-7de0-447d-916a-0e11e9475b3b/files/e5b3ee31-8c89-42c6-ae6f-f07819d12920/emoji_example.gif")
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-emoji.mp4")
     say Typing(1000)
     say "Sélectionnez directement celui que vous souhaitez !"
 		goto fintuto
