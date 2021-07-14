@@ -8,7 +8,7 @@ start:
   do VISIOCONF = Button("🎦Participer à une visioconférence (Jitsi)")
   do DECOR = Button("❔Interagir avec le décor")
   do EMOJI = Button("😀Utiliser des emojis")
-  do CUSTOM = Button("🤖Système de personalisation")
+  do CUSTOM = Button("🤖Système de personnalisation")
   do SON = Button("🔊Réglages ambiance sonore")
   do INFOS = Button("🖼️Voir les informations d'une personne (à venir)")
   do AIDE = Button("🤯Des bugs ? Besoin d'une aide technique ?")
