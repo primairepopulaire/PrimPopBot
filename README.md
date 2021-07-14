@@ -8,10 +8,13 @@ Voir le bot : https://chat.csml.dev/channels/difm7vtdxz0rr16wigcqnk8sbmqkioxi
 
   ### GitHub
   
+  * Se créer un compte Github
+  * Demander à être ajouter dans le groupe de travail (organisation)
+  * Se rendre sur https://github.com/primairepopulaire
   * Créer une nouvelle branche *dev_nom* et la sélectionner
-  * Aller dans le dossier **.gitignore/workflows** et copier le contenu d'un des fichiers
-  * Créer un nouveau fichier *GithubSync_NOM.yml* et coller
-  * Remplace par ton nom dans *Sync bot on CSML Studio* et les *CSML_CLIENT_API* et le nom de ta branche (ligne 6)
+  * Aller dans le dossier **.gitignore/workflows** et copier le contenu d'un des fichiers présents
+  * Créer un nouveau fichier *GithubSync_NOM.yml* et coller le contenu
+  * Remplacer par ton nom dans *Sync bot on CSML Studio* et les *CSML_CLIENT_API* et le nom de ta branche (ligne 6)
   * Commit
 
   ### CSML
