@@ -28,5 +28,5 @@ retour:
 
 	if (event match RETOUR1) {
 		goto flow Default
-		goto end
+		goto menu@Default
 	}
