@@ -69,9 +69,11 @@ start:
 
 	if (event match VISIOCONF) {
 		say Typing(1000)
-		say "Oui, voici la carte décrivant les différents endroits :"
+		say "Certains endroits sur la carte peuvent permettre de faire une visioconférence avec l'outil Jitsi."
+		say Typing(2000).
+		say "Cela permet par exemple d'être plus nombreux, et d'avoir quelques fonctionnalités supplémentaires"."
     		say Typing(1000)
-    		say Image("https://mapwa.net/static/perso/2022/map/qg/qg-PP.png")
+    		say Video("https://mapwa.net/static/perso/2022/map/qg/qg-PP.png")
     		say "à suivre"
 		goto fintuto
 	}
@@ -105,15 +107,15 @@ start:
 
   if (event match CUSTOM) {
     say Typing(1000)
-		say "Pour personnaliser votre personnage, vous pouvez regarder cette vidéo :"
+		say "Il est possible de personnaliser votre personnage, changer de nom, d'apparence… :"
     say Typing(1000)
-    say Video("https://cdn.csml.dev/customers/08b05532-7de0-447d-916a-0e11e9475b3b/files/d36035e1-1f46-40cb-a082-834f21b1906b/customize-your-woka.mp4")
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-customize-your-woka.mp4")
 		goto fintuto    
   }
 
   if (event match SON) {
     say Typing(1000)
-		say "Dans certaines zones du QG (espace libre et rivière), Workadventure ajoute une ambiance sonore."
+		say "Dans certaines zones de la carte, vous pouvez avoir des ambiances sonores."
     say Typing(500)
     say "Dans ce cas, vous pouvez régler le volume en utilisant le curseur qui apparaît en haut au milieu de votre écran."
     say Typing(500)
