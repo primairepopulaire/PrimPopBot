@@ -132,7 +132,9 @@ start:
 
   if (event match AIDE) {
     say Typing(1000)
-		say "Si vous rencontrez des bugs ou avez besoin d'assistance technique, adressez-vous à **Jako**, **Clara** ou **Get** ici au QG."
+		say "Si vous rencontrez des bugs ou avez besoin d'assistance technique, n'hésitez pas à demander autour de vous."
+		say typing(2000)
+		say "Vous pouvez aussi nous rejoindre sur le Discord de WorkAdventure ici : https://discord.gg/YGtngdh9gt"
 		goto fintuto
   }
 
