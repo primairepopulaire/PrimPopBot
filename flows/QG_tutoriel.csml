@@ -33,6 +33,9 @@ choicetutorial:
   )
   hold
 
+
+// SECTION NOOB
+
   if (event match NOOB) {
     say Typing(2000)
     say "Tout d'abord, bravo ! Si vous êtes arrivé.ées jusqu'à moi, c'est déjà une belle étape."
@@ -61,6 +64,42 @@ choicetutorial:
       goto choicetutorial
     }
   }
+
+// NOOB STEP 1
+noob_step1:
+  say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
+  say Typing(3000)
+  say Video("https://mapwa.net/static/perso/watuto/WATUTO-icon-microphone-camera.mp4")
+
+  do CONTINUE = Button("En savoir plus")
+  do MENU = Button("⤴️Retour à la liste des fonctionnalités")
+
+  say Question("Voulez-vous en savoir plus ?",
+    button_type="quick_reply",
+    buttons = [CONTINUE, MENU]
+  )
+  hold 
+
+  if (event match CONTINUE) {
+    goto noob_step2
+  }
+  if (event match MENU) {
+    goto choicetutorial
+  }
+
+// NOOB STEP 2
+
+noob_step2:
+  say Typing(2000)
+  say "Pour avoir une vue plus large de la carte, vous pouvez aussi zoomer le texte de la page de votre navigateur."
+  say Typing(2000)
+  say "Avec les touches **CTRL + Molette de souris** par exemple ou via les menus de votre navigateur."
+  say Typing(3000)
+  say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
+  goto endtutorial
+
+
+
 
   if (event match BUBBLE) {
 
@@ -170,35 +209,6 @@ choicetutorial:
     goto menu@Default
   }
 
-noob_step1:
-  say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
-  say Typing(3000)
-  say Video("https://mapwa.net/static/perso/watuto/WATUTO-icon-microphone-camera.mp4")
-
-  do CONTINUE = Button("En savoir plus")
-  do MENU = Button("⤴️Retour à la liste des fonctionnalités")
-
-  say Question("Voulez-vous en savoir plus ?",
-    button_type="quick_reply",
-    buttons = [CONTINUE, MENU]
-  )
-  hold 
-
-  if (event match CONTINUE) {
-    goto noob_step2
-  }
-  if (event match MENU) {
-    goto choicetutorial
-  }
-
-noob_step2:
-  say Typing(2000)
-  say "Pour avoir une vue plus large de la carte, vous pouvez aussi zoomer le texte de la page de votre navigateur."
-  say Typing(2000)
-  say "Avec les touches **CTRL + Molette de souris** par exemple ou via les menus de votre navigateur."
-  say Typing(3000)
-  say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
-  goto endtutorial
 
 area_step1:
   say Typing(3000)
