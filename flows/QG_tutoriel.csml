@@ -9,10 +9,16 @@
  * 👉 Give CSML a 🌟 on Github: https://github.com/CSML-by-Clevy/csml-engine
  * 👉 Join the CSML community on Slack: https://csml.dev/slack
  */
+ 
+////////////////
+// SECTION START
 start:
 
   goto choicetutorial
-  
+
+////////////////
+// SECTION CHOICE TUTORIAL
+
 choicetutorial:
   do NOOB = Button("💪 Trucs et astuces débutants.tes")
   do BUBBLE = Button("🙌 Entrer en contact avec des personnes")
@@ -33,8 +39,8 @@ choicetutorial:
   )
   hold
 
-
-// SECTION NOOB
+////////////////
+// CHOICE NOOB
 
   if (event match NOOB) {
     say Typing(2000)
@@ -64,8 +70,9 @@ choicetutorial:
       goto choicetutorial
     }
   }
-  
-// SECTION BUBBLE
+
+//////////////////
+// CHOICE BUBBLE
 
   if (event match BUBBLE) {
 
@@ -82,8 +89,9 @@ choicetutorial:
     say "Une précision, certaines zones de la carte peuvent être silencieuse, dans ces zones, il n'est pas possible de converser avec quelqu'un d'autre."
     goto endtutorial
   }
-  
-// SECTION MEETING
+
+///////////////////
+// CHOICE MEETING
 
   if (event match MEETING) {
     say Typing(1000)
@@ -96,7 +104,8 @@ choicetutorial:
     goto endtutorial
   }
 
-// SECTION AREA
+////////////////
+// CHOICE AREA
 
   if (event match AREA) {
     say Typing(1000)
@@ -125,7 +134,8 @@ choicetutorial:
 
   }
 
-// SECTION EMOJI
+/////////////////
+// CHOICE EMOJI
 
 if (event match EMOJI) {
     say Typing(1000)
@@ -137,7 +147,8 @@ if (event match EMOJI) {
     goto endtutorial
   }
 
-// SECTION CUSTOM
+//////////////////
+// CHOICE CUSTOM
 
   if (event match CUSTOM) {
     say Typing(1000)
@@ -147,7 +158,8 @@ if (event match EMOJI) {
     goto endtutorial    
   }
 
-// SECTION SOUND
+/////////////////
+// CHOICE SOUND
 
   if (event match SOUND) {
     say Typing(1000)
@@ -159,7 +171,8 @@ if (event match EMOJI) {
     goto endtutorial        
   }
 
-// SECTION INFOS
+/////////////////
+// CHOICE INFOS
 
   if (event match INFOS) {
     say Typing(1000)
@@ -169,7 +182,8 @@ if (event match EMOJI) {
     goto endtutorial
   }
 
-// SECTION HELP
+////////////////
+// CHOICE HELP
 
   if (event match HELP) {
     say Typing(1000)
@@ -189,7 +203,9 @@ if (event match EMOJI) {
     goto menu@Default
   }
 
-// NOOB STEP 1
+///////////////////////
+// SECTION NOOB STEP 1
+
   noob_step1:
     say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
     say Typing(3000)
@@ -210,8 +226,9 @@ if (event match EMOJI) {
    if (event match MENU) {
       goto choicetutorial
    }
-
-  // NOOB STEP 2
+   
+/////////////////////
+// SECTION NOOB STEP 2
 
   noob_step2:
     say Typing(2000)
@@ -219,7 +236,8 @@ if (event match EMOJI) {
     say Typing(2000)
     say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
   goto endtutorial
-
+  
+  ///////////////////////
   // SECTION AREA STEP 1
   
   area_step1:
@@ -229,6 +247,7 @@ if (event match EMOJI) {
     say Video("https://mapwa.net/static/perso/watuto/WATUTO-window-icons.mp4")
   goto endtutorial
 
+//////////////////////
 // SECTION ENDTUTORIAL
 
 endtutorial:
