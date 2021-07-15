@@ -64,40 +64,7 @@ choicetutorial:
       goto choicetutorial
     }
   }
-
-  // NOOB STEP 1
-  noob_step1:
-    say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
-    say Typing(3000)
-    say Video("https://mapwa.net/static/perso/watuto/WATUTO-icon-microphone-camera.mp4")
-
-    do CONTINUE = Button("En savoir plus")
-    do MENU = Button("⤴️Retour à la liste des fonctionnalités")
-
-    say Question("Voulez-vous en savoir plus ?",
-      button_type="quick_reply",
-      buttons = [CONTINUE, MENU]
-    )
-    hold 
-
-    if (event match CONTINUE) {
-      goto noob_step2
-    }
-   if (event match MENU) {
-      goto choicetutorial
-   }
-
-  // NOOB STEP 2
-
-  noob_step2:
-    say Typing(2000)
-    say "Pour avoir une vue plus large de la carte, vous pouvez zoomer avec la **molette** de la souris ou le pad."
-    say Typing(2000)
-    say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
-  goto endtutorial
-
-
-
+  
 // SECTION BUBBLE
 
   if (event match BUBBLE) {
@@ -157,15 +124,6 @@ choicetutorial:
     }
 
   }
-
-  // SECTION AREA STEP 1
-  
-  area_step1:
-    say Typing(3000)
-    say "La fenêtre qui s'ouvre peut être agrandi en plein écran, déplacée ou fermée à l'aide des icônes en haut à gauche."
-    say Typing(3000)
-    say Video("https://mapwa.net/static/perso/watuto/WATUTO-window-icons.mp4")
-  goto endtutorial
 
 // SECTION EMOJI
 
@@ -231,6 +189,45 @@ if (event match EMOJI) {
     goto menu@Default
   }
 
+// NOOB STEP 1
+  noob_step1:
+    say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
+    say Typing(3000)
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-icon-microphone-camera.mp4")
+
+    do CONTINUE = Button("En savoir plus")
+    do MENU = Button("⤴️Retour à la liste des fonctionnalités")
+
+    say Question("Voulez-vous en savoir plus ?",
+      button_type="quick_reply",
+      buttons = [CONTINUE, MENU]
+    )
+    hold 
+
+    if (event match CONTINUE) {
+      goto noob_step2
+    }
+   if (event match MENU) {
+      goto choicetutorial
+   }
+
+  // NOOB STEP 2
+
+  noob_step2:
+    say Typing(2000)
+    say "Pour avoir une vue plus large de la carte, vous pouvez zoomer avec la **molette** de la souris ou le pad."
+    say Typing(2000)
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
+  goto endtutorial
+
+  // SECTION AREA STEP 1
+  
+  area_step1:
+    say Typing(3000)
+    say "La fenêtre qui s'ouvre peut être agrandi en plein écran, déplacée ou fermée à l'aide des icônes en haut à gauche."
+    say Typing(3000)
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-window-icons.mp4")
+  goto endtutorial
 
 // SECTION ENDTUTORIAL
 
