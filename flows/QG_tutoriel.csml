@@ -65,16 +65,16 @@ choicetutorial:
   if (event match BUBBLE) {
 
     say Typing(1000)
-        say Image("https://mapwa.net/static/perso/watuto/WA-bulle-rencontre.png")
+    say Image("https://mapwa.net/static/perso/watuto/WA-bulle-rencontre.png")
     say "Quand vous vous rapprochez d'une personne, une bulle apparaît, et vous pouvez instantannément discuter avec cette personne."
-        say Typing(1000)
-        say "De même si une personne s'approche de vous, un son vous préviendra."
-        say Typing(1000)
-        say "Ce mode de conversation est limité à 4 personnes. À 4, la bulle devient rouge."
-      say Typing(1000)
-        say Video("https://mapwa.net/static/perso/watuto/WATUTO-conversation-bubble-resized.mp4")
-        say Typing(1000)
-        say "Une précision, certaines zones de la carte peuvent être silencieuse, dans ces zones, il n'est pas possible de converser avec quelqu'un d'autre."
+    say Typing(1000)
+    say "De même si une personne s'approche de vous, un son vous préviendra."
+    say Typing(1000)
+    say "Ce mode de conversation est limité à 4 personnes. À 4, la bulle devient rouge."
+    say Typing(1000)
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-conversation-bubble-resized.mp4")
+    say Typing(1000)
+    say "Une précision, certaines zones de la carte peuvent être silencieuse, dans ces zones, il n'est pas possible de converser avec quelqu'un d'autre."
     goto endtutorial
   }
 
@@ -83,9 +83,9 @@ choicetutorial:
     say "Certains endroits sur la carte peuvent permettre de faire une visioconférence avec l'outil Jitsi."
     say Typing(2000)
     say "Cela permet par exemple d'être plus nombreux, et d'avoir quelques fonctionnalités supplémentaires."
-        say Typing(1000)
-        say Video("https://mapwa.net/static/perso/2022/map/qg/qg-PP.png")
-        say "à suivre"
+    say Typing(1000)
+    say Video("https://mapwa.net/static/perso/2022/map/qg/qg-PP.png")
+    say "à suivre"
     goto endtutorial
   }
 
@@ -198,7 +198,7 @@ noob_step2:
   say "Avec les touches **CTRL + Molette de souris** par exemple ou via les menus de votre navigateur."
   say Typing(3000)
   say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
-  goto fintuto
+  goto endtutorial
 
 area_step1:
   say Typing(3000)
@@ -207,7 +207,7 @@ area_step1:
   say Video("https://mapwa.net/static/perso/watuto/WATUTO-window-icons.mp4")
   goto endtutorial
 
-fintuto:
+endtutorial:
   say "Que voulez-vous faire ?"
   do BACK1 = Button("⬆️Revenir à la liste des fonctionnalités")
   do BACK2 = Button("⬆️Retour au menu d'accueil")
@@ -219,7 +219,7 @@ fintuto:
 
   if (event match BACK1) {
     say Typing(1000)
-    goto start
+    goto choicetutorial
   }
 
   if (event match BACK2) {
