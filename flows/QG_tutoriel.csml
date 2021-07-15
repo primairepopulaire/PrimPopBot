@@ -1,165 +1,185 @@
+/**
+ * Welcome to CSML Studio!
+ *
+ * This simple CSML starter flow works out of the box, and you can easily
+ * try it on the right hand side by clicking on `build and run`.
+ *
+ * Some useful CSML links:
+ * 👉 Getting started: https://docs.csml.dev/studio/getting-started
+ * 👉 Give CSML a 🌟 on Github: https://github.com/CSML-by-Clevy/csml-engine
+ * 👉 Join the CSML community on Slack: https://csml.dev/slack
+ */
 start:
 
-  goto choixtuto
+  goto choicetutorial
   
-  choixtuto:
-  do DEBUTANTS = Button("💪Trucs et astuces débutants.tes")
-  do CONTACT = Button("🙌Entrer en contact avec des personnes")
-  do VISIOCONF = Button("🎦Participer à une visioconférence (Jitsi)")
-  do DECOR = Button("❔Interagir avec le décor")
-  do EMOJI = Button("😀Utiliser des emojis")
-  do CUSTOM = Button("🤖Système de personnalisation")
-  do SON = Button("🔊Réglages ambiance sonore")
-  do INFOS = Button("🖼️Voir les informations d'une personne (à venir)")
-  do AIDE = Button("🤯Des bugs ? Besoin d'une aide technique ?")
-  do MENU = Button("⤴️Retour au menu d'accueil")
+  choice:
+  do NOOB = Button("💪 Trucs et astuces débutants.tes")
+  do BUBBLE = Button("🙌 Entrer en contact avec des personnes")
+  do MEETING = Button("🎦 Participer à une visioconférence (Jitsi)")
+  do AREA = Button("❔ Interagir avec le décor")
+  do EMOJI = Button("😀 Utiliser des emojis")
+  do CUSTOM = Button("🤖 Système de personnalisation")
+  do SOUND = Button("🔊 Réglages ambiance sonore")
+  do INFOS = Button("🖼️ Voir les informations d'une personne (Membres uniquement)")
+  do HELP = Button("🤯 Des bugs ? Besoin d'une aide technique ?")
+  //do MENU = Button("⤴️Retour au menu d'accueil")
 
-  say Typing(2000)
+  say Typing(500)
   say "Voici la liste des fonctionnalités, quelle est celle que vous souhaitez approfondir ?"
   say Question(
      button_type="quick_reply",
-     buttons = [DEBUTANTS, CONTACT, VISIOCONF, DECOR, EMOJI, CUSTOM, SON, INFOS, AIDE, MENU]
+     //buttons = [DEBUTANTS, CONTACT, VISIOCONF, DECOR, EMOJI, CUSTOM, SON, INFOS, AIDE, MENU]
+    buttons = [NOOB, BUBBLE, MEETING, AREA, EMOJI, CUSTOM, SOUND, INFOS, HELP]
   )
   hold
 
-	if (event match DEBUTANTS) {
-		say Typing(2000)
-		say "Tout d'abord, bravo ! Si vous êtes arrivé.ées jusqu'à moi, c'est déjà une belle étape."
-    		say Image("https://media.giphy.com/media/1mgpdUbUyT7z0olfmq/giphy.gif")
-   		say Typing(4000)
-    		say "Pour information, les déplacements se font avec les flèches, néanmoins vous pouvez aussi utiliser les touches **Z Q S D**  de votre clavier."
-    		say Typing(6000)
-    		say "Envie d'accélérer ? Appuyer sur **shift** en même temps que la touche de déplacement."
-    		say Typing(2000)
-		say Video("https://mapwa.net/static/perso/watuto/WATUTO-shift-speed.mp4")
-    		say Typing(6000)
+  if (event match NOOB) {
+    say Typing(2000)
+    say "Tout d'abord, bravo ! Si vous êtes arrivé.ées jusqu'à moi, c'est déjà une belle étape."
+    say Image("https://media.giphy.com/media/1mgpdUbUyT7z0olfmq/giphy.gif")
+    say Typing(4000)
+    say "Pour information, les déplacements se font avec les flèches, néanmoins vous pouvez aussi utiliser les touches **Z Q S D**  de votre clavier."
+    say Typing(6000)
+    say "Envie d'accélérer ? Appuyer sur **shift** en même temps que la touche de déplacement."
+    say Typing(2000)
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-shift-speed.mp4")
+    say Typing(6000)
     
 // TODO CONTINUER pour Clara :)
 
-    		say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
-    		say Typing(3000)
-    		say Video("https://mapwa.net/static/perso/watuto/WATUTO-icon-microphone-camera.mp4")
+        say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
+        say Typing(3000)
+        say Video("https://mapwa.net/static/perso/watuto/WATUTO-icon-microphone-camera.mp4")
     
 // TODO CONTINUER pour Clara :)
 
-    		say Typing(2000)
-    		say "Pour avoir une vue plus large de la carte, vous pouvez aussi zoomer le texte de la page de votre navigateur."
-    		say Typing(2000)
-    		say "Avec les touches **CTRL + Molette de souris** par exemple ou via les menus de votre navigateur."
-    		say Typing(3000)
-    		say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
-		goto fintuto
-	}
+        say Typing(2000)
+        say "Pour avoir une vue plus large de la carte, vous pouvez aussi zoomer le texte de la page de votre navigateur."
+        say Typing(2000)
+        say "Avec les touches **CTRL + Molette de souris** par exemple ou via les menus de votre navigateur."
+        say Typing(3000)
+        say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
+    goto fintuto
+  }
 
-	if (event match CONTACT) {
+  if (event match BUBBLE) {
 
-		say Typing(1000)
-    		say Image("https://mapwa.net/static/perso/watuto/WA-bulle-rencontre.png")
-		say "Quand vous vous rapprochez d'une personne, une bulle apparaît, et vous pouvez instantannément discuter avec cette personne."
-    		say Typing(1000)
-    		say "De même si une personne s'approche de vous, un son vous préviendra."
-    		say Typing(1000)
-    		say "Ce mode de conversation est limité à 4 personnes. À 4, la bulle devient rouge."
-   		say Typing(1000)
-    		say Video("https://mapwa.net/static/perso/watuto/WATUTO-conversation-bubble.mp4")
-    		say Typing(1000)
-    		say "Une précision, certaines zones de la carte peuvent être silencieuse, dans ces zones, il n'est pas possible de converser avec quelqu'un d'autre."
-		goto fintuto
-	}
+    say Typing(1000)
+        say Image("https://mapwa.net/static/perso/watuto/WA-bulle-rencontre.png")
+    say "Quand vous vous rapprochez d'une personne, une bulle apparaît, et vous pouvez instantannément discuter avec cette personne."
+        say Typing(1000)
+        say "De même si une personne s'approche de vous, un son vous préviendra."
+        say Typing(1000)
+        say "Ce mode de conversation est limité à 4 personnes. À 4, la bulle devient rouge."
+      say Typing(1000)
+        say Video("https://mapwa.net/static/perso/watuto/WATUTO-conversation-bubble-resized.mp4")
+        say Typing(1000)
+        say "Une précision, certaines zones de la carte peuvent être silencieuse, dans ces zones, il n'est pas possible de converser avec quelqu'un d'autre."
+    goto endtutorial
+  }
 
-	if (event match VISIOCONF) {
-		say Typing(1000)
-		say "Certains endroits sur la carte peuvent permettre de faire une visioconférence avec l'outil Jitsi."
-		say Typing(2000)
-		say "Cela permet par exemple d'être plus nombreux, et d'avoir quelques fonctionnalités supplémentaires."
-    		say Typing(1000)
-    		say Video("https://mapwa.net/static/perso/2022/map/qg/qg-PP.png")
-    		say "à suivre"
-		goto fintuto
-	}
+  if (event match MEETING) {
+    say Typing(1000)
+    say "Certains endroits sur la carte peuvent permettre de faire une visioconférence avec l'outil Jitsi."
+    say Typing(2000)
+    say "Cela permet par exemple d'être plus nombreux, et d'avoir quelques fonctionnalités supplémentaires."
+        say Typing(1000)
+        say Video("https://mapwa.net/static/perso/2022/map/qg/qg-PP.png")
+        say "à suivre"
+    goto endtutorial
+  }
 
-  if (event match DECOR) {
-		say Typing(1000)
-		say "Certains endroits de la carte peuvent avoir des actions, elles sont souvent rendues visibles par un signe (une pancarte, des traces de pas au so…)."
-		say Typing(3000)
-		say "Ainsi ces zones peuvent ouvrir une page web, une vidéo ou un popup par exemple"
-		say Typing(3000)
-		say Video("https://mapwa.net/static/perso/watuto/WATUTO-zone-actions.mp4")
-		
-		// TODO CONTINUER
+  if (event match AREA) {
+    say Typing(1000)
+    say "Certains endroits de la carte peuvent avoir des actions, elles sont souvent rendues visibles par un signe (une pancarte, des traces de pas au so…)."
+    say Typing(3000)
+    say "Ainsi ces zones peuvent ouvrir une page web, une vidéo ou un popup par exemple"
+    say Typing(3000)
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-zone-actions.mp4")
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-video-youtube.mp4")
+    
+  // TODO CONTINUER pour Clara :)
 
-		say Typing(3000)
-		say "La fenêtre qui s'ouvre peut être aggrandi en plein écran, déplacée ou fermée à l'aide des icônes en haut à gauche."
-		say Typing(3000)
-		say Video("https://mapwa.net/static/perso/watuto/WATUTO-window-icons.mp4")
-		goto fintuto
-	}
+    say Typing(3000)
+    say "La fenêtre qui s'ouvre peut être agrandi en plein écran, déplacée ou fermée à l'aide des icônes en haut à gauche."
+    say Typing(3000)
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-window-icons.mp4")
+    goto endtutorial
+  }
 
   if (event match EMOJI) {
-		say Typing(1000)
-		say "Pour utiliser des emojis, cliquez sur votre personnage, vous verrez apparaître un cercle d'emojis."
+    say Typing(1000)
+    say "Pour utiliser des emojis, cliquez sur votre personnage, vous verrez apparaître un cercle d'emojis."
     say Typing(1000)
     say Video("https://mapwa.net/static/perso/watuto/WATUTO-emoji.mp4")
     say Typing(1000)
     say "Sélectionnez directement celui que vous souhaitez !"
-		goto fintuto
-	}
+    goto endtutorial
+  }
 
   if (event match CUSTOM) {
     say Typing(1000)
-		say "Il est possible de personnaliser votre personnage, changer de nom, d'apparence… :"
+    say "Il est possible de personnaliser votre personnage, changer de nom, d'apparence, ajouter un compagnon… :"
     say Typing(1000)
     say Video("https://mapwa.net/static/perso/watuto/WATUTO-customize-your-woka-resized.mp4")
-		goto fintuto    
+    goto endtutorial    
   }
 
-  if (event match SON) {
+  if (event match SOUND) {
     say Typing(1000)
-		say "Dans certaines zones de la carte, vous pouvez avoir des ambiances sonores."
+    say "Dans certaines zones de la carte, vous pouvez avoir des ambiances sonores."
     say Typing(500)
     say "Dans ce cas, vous pouvez régler le volume en utilisant le curseur qui apparaît en haut au milieu de votre écran."
-    say Typing(500)
-    say Image("https://cdn.csml.dev/customers/08b05532-7de0-447d-916a-0e11e9475b3b/files/786aaaf0-7fad-4069-a1e4-ceeb77de2031/volume_sonore.png")
-		goto fintuto        
+    say Typing(1000)
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-sound.mp4")
+    goto endtutorial        
   }
 
   if (event match INFOS) {
     say Typing(1000)
-		say "🚧 En construction ! Cette fonctionnalité en cours de développement permettra de voir des infos sur votre interlocuteur..."
+    say "En cliquant sur l'avatar (Woka) d'une personne, vous pouvez voir sa carte de visite."
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-wacard.mp4")
     say "Par exemple : prénom et nom, ..."
-		goto fintuto
+    goto endtutorial
   }
 
-  if (event match AIDE) {
+  if (event match HELP) {
     say Typing(1000)
-		say "Si vous rencontrez des bugs ou avez besoin d'assistance technique, n'hésitez pas à demander autour de vous."
-		say Typing(2000)
-		say "Vous pouvez aussi nous rejoindre sur le Discord de WorkAdventure ici : https://discord.gg/YGtngdh9gt"
-		goto fintuto
+    say "Si vous rencontrez des bugs ou avez besoin d'assistance technique, n'hésitez pas à demander autour de vous."
+    say Typing(2000)
+    say "Vous pouvez aussi nous rejoindre sur le Discord de WorkAdventure ici : https://discord.gg/YGtngdh9gt"
+    say Typing(2000)
+    say "Il est également possible de venir poser directement vos questions à l'équipe de WorkAdventure."
+    say Image("https://mapwa.net/static/perso/watuto/WATUTO-team.png")
+    say "https://play.staging.workadventu.re/@/tcm/workadventure/wa-village"
+    goto endtutorial
   }
 
   // all other cases, including back to home menu
   else {
-		say Typing(1000)
-		goto flow Default
+    say Typing(1000)
+    goto flow Default
   }
 
 fintuto:
   say "Que voulez-vous faire ?"
   do BACK1 = Button("⬆️Revenir à la liste des fonctionnalités")
-	do BACK2 = Button("⬆️Retour au menu d'accueil")
+  //do BACK2 = Button("⬆️Retour au menu d'accueil")
     say Question(
      button_type="quick_reply",
-     buttons = [BACK1, BACK2]
+     //buttons = [BACK1, BACK2]
+     buttons = [BACK1]
   )
   hold
 
-	 if (event match BACK1) {
-		say Typing(1000)
-		goto flow QG_tutoriel
-	}
-
-	 if (event match BACK2) {
-		say Typing(1000)
-		goto flow Default
-	}
+   if (event match BACK1) {
+    say Typing(1000)
+    goto start
+  }
+/**
+   if (event match BACK2) {
+    say Typing(1000)
+    goto flow Default
+  }
+*/
