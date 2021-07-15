@@ -65,41 +65,42 @@ choicetutorial:
     }
   }
 
-// NOOB STEP 1
-noob_step1:
-  say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
-  say Typing(3000)
-  say Video("https://mapwa.net/static/perso/watuto/WATUTO-icon-microphone-camera.mp4")
+  // NOOB STEP 1
+  noob_step1:
+    say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
+    say Typing(3000)
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-icon-microphone-camera.mp4")
 
-  do CONTINUE = Button("En savoir plus")
-  do MENU = Button("⤴️Retour à la liste des fonctionnalités")
+    do CONTINUE = Button("En savoir plus")
+    do MENU = Button("⤴️Retour à la liste des fonctionnalités")
 
-  say Question("Voulez-vous en savoir plus ?",
-    button_type="quick_reply",
-    buttons = [CONTINUE, MENU]
-  )
-  hold 
+    say Question("Voulez-vous en savoir plus ?",
+      button_type="quick_reply",
+      buttons = [CONTINUE, MENU]
+    )
+    hold 
 
-  if (event match CONTINUE) {
-    goto noob_step2
-  }
-  if (event match MENU) {
-    goto choicetutorial
-  }
+    if (event match CONTINUE) {
+      goto noob_step2
+    }
+   if (event match MENU) {
+      goto choicetutorial
+   }
 
-// NOOB STEP 2
+  // NOOB STEP 2
 
-noob_step2:
-  say Typing(2000)
-  say "Pour avoir une vue plus large de la carte, vous pouvez aussi zoomer le texte de la page de votre navigateur."
-  say Typing(2000)
-  say "Avec les touches **CTRL + Molette de souris** par exemple ou via les menus de votre navigateur."
-  say Typing(3000)
-  say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
+  noob_step2:
+    say Typing(2000)
+    say "Pour avoir une vue plus large de la carte, vous pouvez aussi zoomer le texte de la page de votre navigateur."
+    say Typing(2000)
+    say "Avec les touches **CTRL + Molette de souris** par exemple ou via les menus de votre navigateur."
+    say Typing(3000)
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
   goto endtutorial
 
 
 
+// SECTION BUBBLE
 
   if (event match BUBBLE) {
 
@@ -116,6 +117,8 @@ noob_step2:
     say "Une précision, certaines zones de la carte peuvent être silencieuse, dans ces zones, il n'est pas possible de converser avec quelqu'un d'autre."
     goto endtutorial
   }
+  
+// SECTION MEETING
 
   if (event match MEETING) {
     say Typing(1000)
@@ -127,6 +130,8 @@ noob_step2:
     say "à suivre"
     goto endtutorial
   }
+
+// SECTION AREA
 
   if (event match AREA) {
     say Typing(1000)
@@ -155,7 +160,18 @@ noob_step2:
 
   }
 
-  if (event match EMOJI) {
+  // SECTION AREA STEP 1
+  
+  area_step1:
+    say Typing(3000)
+    say "La fenêtre qui s'ouvre peut être agrandi en plein écran, déplacée ou fermée à l'aide des icônes en haut à gauche."
+    say Typing(3000)
+    say Video("https://mapwa.net/static/perso/watuto/WATUTO-window-icons.mp4")
+  goto endtutorial
+
+// SECTION EMOJI
+
+if (event match EMOJI) {
     say Typing(1000)
     say "Pour utiliser des emojis, cliquez sur votre personnage, vous verrez apparaître un cercle d'emojis."
     say Typing(1000)
@@ -165,6 +181,8 @@ noob_step2:
     goto endtutorial
   }
 
+// SECTION CUSTOM
+
   if (event match CUSTOM) {
     say Typing(1000)
     say "Il est possible de personnaliser votre personnage, changer de nom, d'apparence, ajouter un compagnon… :"
@@ -172,6 +190,8 @@ noob_step2:
     say Video("https://mapwa.net/static/perso/watuto/WATUTO-customize-your-woka-resized.mp4")
     goto endtutorial    
   }
+
+// SECTION SOUND
 
   if (event match SOUND) {
     say Typing(1000)
@@ -183,6 +203,8 @@ noob_step2:
     goto endtutorial        
   }
 
+// SECTION INFOS
+
   if (event match INFOS) {
     say Typing(1000)
     say "En cliquant sur l'avatar (Woka) d'une personne, vous pouvez voir sa carte de visite."
@@ -190,6 +212,8 @@ noob_step2:
     say "Par exemple : prénom et nom, ..."
     goto endtutorial
   }
+
+// SECTION HELP
 
   if (event match HELP) {
     say Typing(1000)
@@ -210,12 +234,7 @@ noob_step2:
   }
 
 
-area_step1:
-  say Typing(3000)
-  say "La fenêtre qui s'ouvre peut être agrandi en plein écran, déplacée ou fermée à l'aide des icônes en haut à gauche."
-  say Typing(3000)
-  say Video("https://mapwa.net/static/perso/watuto/WATUTO-window-icons.mp4")
-  goto endtutorial
+// SECTION ENDTUTORIAL
 
 endtutorial:
   say "Que voulez-vous faire ?"
