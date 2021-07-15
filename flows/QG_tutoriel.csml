@@ -46,7 +46,7 @@ choicetutorial:
     say "Envie d'accélérer ? Appuyer sur **shift** en même temps que la touche de déplacement."
     say Typing(2000)
     say Video("https://mapwa.net/static/perso/watuto/WATUTO-shift-speed.mp4")
-    say Typing(6000)
+    say Typing(3000)
     
     do CONTINUE = Button("En savoir plus")
     do MENU = Button("⤴️Retour à la liste des fonctionnalités")
@@ -91,10 +91,8 @@ choicetutorial:
 
   noob_step2:
     say Typing(2000)
-    say "Pour avoir une vue plus large de la carte, vous pouvez aussi zoomer le texte de la page de votre navigateur."
+    say "Pour avoir une vue plus large de la carte, vous pouvez zoomer avec la **molette** de la souris ou le pad."
     say Typing(2000)
-    say "Avec les touches **CTRL + Molette de souris** par exemple ou via les menus de votre navigateur."
-    say Typing(3000)
     say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
   goto endtutorial
 
