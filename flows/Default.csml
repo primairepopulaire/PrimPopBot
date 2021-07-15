@@ -30,9 +30,7 @@ start:
   say "❕ Je suis encore tout jeune 😉, je compte sur vous pour me faire des retours et des demandes sur vos remarques, besoins…"
   say "Pour cela, il vous suffit d'aller échanger ici au QG avec **Jako**, **Clara** ou **Get**"
   say Typing(2000)
-
-
-goto menu
+  goto menu
 
 menu:
   do QGVIRTUEL = Button("🏡Présentation du QG virtuel")

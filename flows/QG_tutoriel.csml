@@ -13,7 +13,7 @@ start:
 
   goto choicetutorial
   
-  choice:
+choicetutorial:
   do NOOB = Button("💪 Trucs et astuces débutants.tes")
   do BUBBLE = Button("🙌 Entrer en contact avec des personnes")
   do MEETING = Button("🎦 Participer à une visioconférence (Jitsi)")
@@ -23,7 +23,6 @@ start:
   do SOUND = Button("🔊 Réglages ambiance sonore")
   do INFOS = Button("🖼️ Voir les informations d'une personne (Membres uniquement)")
   do HELP = Button("🤯 Des bugs ? Besoin d'une aide technique ?")
-  //do MENU = Button("⤴️Retour au menu d'accueil")
 
   say Typing(500)
   say "Voici la liste des fonctionnalités, quelle est celle que vous souhaitez approfondir ?"
@@ -46,21 +45,21 @@ start:
     say Video("https://mapwa.net/static/perso/watuto/WATUTO-shift-speed.mp4")
     say Typing(6000)
     
-// TODO CONTINUER pour Clara :)
+    do CONTINUE = Button("En savoir plus")
+    do MENU = Button("⤴️Retour à la liste des fonctionnalités")
 
-        say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
-        say Typing(3000)
-        say Video("https://mapwa.net/static/perso/watuto/WATUTO-icon-microphone-camera.mp4")
-    
-// TODO CONTINUER pour Clara :)
+    say Question("Voulez-vous en savoir plus ?",
+      button_type="quick_reply",
+      buttons = [CONTINUE, MENU]
+    )
+    hold  
 
-        say Typing(2000)
-        say "Pour avoir une vue plus large de la carte, vous pouvez aussi zoomer le texte de la page de votre navigateur."
-        say Typing(2000)
-        say "Avec les touches **CTRL + Molette de souris** par exemple ou via les menus de votre navigateur."
-        say Typing(3000)
-        say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
-    goto fintuto
+    if (event match CONTINUE) {
+        goto noob_step1
+    }
+    if (event match MENU) {
+      goto choicetutorial
+    }
   }
 
   if (event match BUBBLE) {
@@ -99,13 +98,22 @@ start:
     say Video("https://mapwa.net/static/perso/watuto/WATUTO-zone-actions.mp4")
     say Video("https://mapwa.net/static/perso/watuto/WATUTO-video-youtube.mp4")
     
-  // TODO CONTINUER pour Clara :)
+    do CONTINUE = Button("En savoir plus")
+    do MENU = Button("⤴️Retour à la liste des fonctionnalités")
 
-    say Typing(3000)
-    say "La fenêtre qui s'ouvre peut être agrandi en plein écran, déplacée ou fermée à l'aide des icônes en haut à gauche."
-    say Typing(3000)
-    say Video("https://mapwa.net/static/perso/watuto/WATUTO-window-icons.mp4")
-    goto endtutorial
+    say Question("Voulez-vous en savoir plus ?",
+      button_type="quick_reply",
+      buttons = [CONTINUE, MENU]
+    )
+    hold  
+
+    if (event match CONTINUE) {
+        goto area_step1
+    }
+    if (event match MENU) {
+      goto choicetutorial
+    }
+
   }
 
   if (event match EMOJI) {
@@ -159,27 +167,62 @@ start:
   // all other cases, including back to home menu
   else {
     say Typing(1000)
-    goto flow Default
+    goto menu@Default
   }
+
+noob_step1:
+  say "En bas à droite, vous pouvez à tout moment désactiver ou activer votre **microphone** ou votre **caméra**, ou les deux."
+  say Typing(3000)
+  say Video("https://mapwa.net/static/perso/watuto/WATUTO-icon-microphone-camera.mp4")
+
+  do CONTINUE = Button("En savoir plus")
+  do MENU = Button("⤴️Retour à la liste des fonctionnalités")
+
+  say Question("Voulez-vous en savoir plus ?",
+    button_type="quick_reply",
+    buttons = [CONTINUE, MENU]
+  )
+  hold 
+
+  if (event match CONTINUE) {
+    goto noob_step2
+  }
+  if (event match MENU) {
+    goto choicetutorial
+  }
+
+noob_step2:
+  say Typing(2000)
+  say "Pour avoir une vue plus large de la carte, vous pouvez aussi zoomer le texte de la page de votre navigateur."
+  say Typing(2000)
+  say "Avec les touches **CTRL + Molette de souris** par exemple ou via les menus de votre navigateur."
+  say Typing(3000)
+  say Video("https://mapwa.net/static/perso/watuto/WATUTO-zoom.mp4")
+  goto fintuto
+
+area_step1:
+  say Typing(3000)
+  say "La fenêtre qui s'ouvre peut être agrandi en plein écran, déplacée ou fermée à l'aide des icônes en haut à gauche."
+  say Typing(3000)
+  say Video("https://mapwa.net/static/perso/watuto/WATUTO-window-icons.mp4")
+  goto endtutorial
 
 fintuto:
   say "Que voulez-vous faire ?"
   do BACK1 = Button("⬆️Revenir à la liste des fonctionnalités")
-  //do BACK2 = Button("⬆️Retour au menu d'accueil")
-    say Question(
+  do BACK2 = Button("⬆️Retour au menu d'accueil")
+  say Question(
      button_type="quick_reply",
-     //buttons = [BACK1, BACK2]
-     buttons = [BACK1]
+     buttons = [BACK1, BACK2]
   )
   hold
 
-   if (event match BACK1) {
+  if (event match BACK1) {
     say Typing(1000)
     goto start
   }
-/**
-   if (event match BACK2) {
+
+  if (event match BACK2) {
     say Typing(1000)
-    goto flow Default
+    goto menu@Default
   }
-*/
