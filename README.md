@@ -4,7 +4,9 @@ Un chatbot pour https://primairepopulaire.fr/
 
 Voir le bot : https://chat.csml.dev/channels/difm7vtdxz0rr16wigcqnk8sbmqkioxi
 
-Voir le bot de dev de Jako : https://chat.csml.dev/channels/5r2ckoiiqongl2v6yxsbshyahbydyc0h
+Voir les bots de dev :
+* Jako : https://chat.csml.dev/channels/5r2ckoiiqongl2v6yxsbshyahbydyc0h
+* Olivier : https://chat.csml.dev/channels/juce6w4xbwh9g41wtkrcugka2qfjolis
 
 ## Synchronisation GitHub -> CSML
 
